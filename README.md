@@ -38,4 +38,8 @@ The `styles/style.css` file will contain all the CSS styles for the website.
 The `assets/images` folder will contain any images used throughout the website, such as the hero image, team member photos, or any other visual elements.
 
 ## Conclusion
-This technical specification outlines the structure and design of a 3-page website created using HTML and CSS. The website includes a home page, about page, and contact page, with a consistent visual design .
+This technical specification outlines the structure and design of a 3-page website created using HTML and CSS. The website includes a home page, about page, and contact page, with a consistent visual design.
+
+
+# Github Link
+`https://github.com/MelaniePump/sba-307-html-and-css.git`
