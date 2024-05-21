@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Website</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      section {
+        position: relative;
+        margin-inline: 0;
+      }
+
+      #hero {
+        background-image: url("./assets/images/hero.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-height: 600px;
+        overflow: hidden;
+      }
+      .hero-bg-overlay {
+        position: absolute;
+        inset: 0;
+        background-image: linear-gradient(
+          90deg,
+          rgba(3, 4, 94, 0.7) 60%,
+          rgba(0, 0, 0, 0.4) 100%
+        );
+      }
+      .hero-content {
+        height: 100%;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+      }
+      .hero-content div {
+        margin-block: auto;
+      }
+      #text {
+        transform: translateY(-10rem);
+        animation: slide-in .5s linear;
+        animation-fill-mode: forwards;
+      }
+      .hero-content div > h3, #cta-text, .cta, #products{
+        opacity: 0;
+        animation: fade-in 1.5s linear;
+        animation-fill-mode: forwards;
+      }
+      .hero-content h3 {
+        font-size: 40px;
+        line-height: 60px;
+      }
+      .cta {
+        background-color: #0077b6;
+        margin-top: 3rem;
+        color: #fff;
+        padding: 1rem;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background 0.5s;
+      }
+      .cta:hover {
+        background-color: #2496d3;
+      }
+      .hero-content form {
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        color: #707070;
+        height: fit-content;
+        width: 500px;
+        padding: 50px;
+        margin-block: auto;
+      }
+      .hero-content form > label {
+        text-transform: uppercase;
+        padding: 12px 0;
+        font-size: 14px;
+      }
+      .hero-content form > input {
+        background-color: #eeeeee;
+        height: 3rem;
+      }
+      .hero-content form > input:focus {
+        background-color: #caf0f8;
+      }
+      .hero-content form > button {
+        background-color: #e2e2e2;
+        margin-top: 2rem;
+        min-height: 2rem;
+        border: none;
+        border-radius: 12px;
+        padding: 1rem;
+        background-color: #03045e;
+        color: #fff;
+      }
+      form {
+        transform: translateX(calc(100% * 5));
+        animation: slide-from-right .5s linear;
+        animation-fill-mode: forwards;
+      }
+      .form-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .form-cards {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        padding-top: 2rem;
+      }
+      .form-cards img {
+        width: 40px;
+      }
+      .product-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 3rem;
+      }
+      .product-container h2 {
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h3>
+          <a href="index.html" style="color: #0077b6">LOANIT</a>
+        </h3>
+        <ul class="nav-links">
+          <li class="active">
+            <a href="index.html">Home</a>
+          </li>
+          <li><a href="./pages/about.html">About Us</a></li>
+          <li>
+            <div class="dropdown">
+              <p class="dropbtn">
+                Products
+                <i class="fa-solid fa-chevron-down"></i>
+              </p>
+              <div class="dropdown-content">
+                <a href="#">Personal Loan</a>
+                <a href="#">Payday Loan</a>
+                <a href="#">Business Loan</a>
+              </div>
+            </div>
+          </li>
+          <li><a href="./pages/contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="hero">
+        <div class="hero-bg-overlay" />
+        <div class="hero-content container">
+          <div>
+            <p style="color: #c0e9ff; line-height: 0; margin-bottom: -15px" id="text">
+              Welcome to LOANIT
+            </p>
+            <h3>Your Financial <br />Empowerment Partner</h3>
+            <p style="line-height: 0; margin-top: -15px" id="cta-text">
+              Start your journey to financial freedom now!
+            </p>
+            <button class="cta">HOW IT WORKS?</button>
+          </div>
+          <form>
+            <div class="form-header">
+              <p
+                style="
+                  color: #000;
+                  font-weight: 600;
+                  font-size: 18px;
+                  line-height: 0;
+                  margin-bottom: 12px;
+                "
+              >
+                How much do you need?
+              </p>
+              <span
+                style="
+                  font-size: 14px;
+                  color: #03045e;
+                  text-transform: uppercase;
+                "
+              >
+                You could get up to $2000!
+              </span>
+              <div class="form-cards">
+                <img
+                  src="./assets/images/mastercard.png"
+                  alt="mastercard image"
+                />
+                <img src="./assets/images/visa.png" alt="visa image" />
+                <img src="./assets/images/paypal.png" alt="paypal image" />
+              </div>
+            </div>
+            <label for="amount">Amount ($)</label>
+            <input type="number" id="amount" />
+            <label for="duration">Duration (M)</label>
+            <input type="number" id="duration" />
+            <label for="repayment">Repayment</label>
+            <input type="text" id="repayment" />
+            <button>GET YOUR LOAN NOW!</button>
+          </form>
+        </div>
+      </section>
+      <section id="products">
+        <div class="container product-container">
+          <h2>Our Products</h2>
+          <table id="productsTable">
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Payday Loan</td>
+                <td>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Saepe fugit voluptate, soluta sequi necessitatibus
+                  reprehenderit sit similique iste veritatis quaerat laborum est
+                  labore expedita asperiores fuga excepturi cum dolorum harum.
+                </td>
+              </tr>
+              <tr>
+                <td>Personal Loan</td>
+                <td>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Odit, facere corporis dolore et nemo reprehenderit voluptate
+                  dignissimos ducimus quo! Beatae fuga minima nihil inventore
+                  nulla.
+                </td>
+              </tr>
+              <tr>
+                <td>Business Loan</td>
+                <td>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Nobis explicabo praesentium at quis! Soluta velit quis
+                  repellat aut. Officiis aperiam veritatis fugiat velit sint
+                  fuga saepe soluta eius odit sunt.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
